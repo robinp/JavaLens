@@ -27,7 +27,7 @@ public class UpdateTest {
         // WHEN updating the street of the person
         final Person updatedPerson = personStreetLens.set(person, "Other str.");
         // THEN the street changed
-        Assert.assertEquals("Other str.", updatedPerson.address.street);
+        Assert.assertEquals("Other str.", personStreetLens.get(updatedPerson));
         // AND other data didn't change
         Assert.assertEquals("X1234", updatedPerson.address.zipCode);
     }
