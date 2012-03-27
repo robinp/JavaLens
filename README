@@ -1,1 +1,7 @@
-This file was created by IntelliJ IDEA 11.1 for binding GitHub repository
+JavaLens
+--------
+
+Small example on using Lens from Java.
+
+Without Lens, modifying a deep nested immutable structure is inconvenient,
+but with Lens it becomes quite easy.
