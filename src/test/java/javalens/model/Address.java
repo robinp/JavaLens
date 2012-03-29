@@ -1,15 +1,12 @@
 package javalens.model;
 
 import javalens.Lens;
+import lombok.Data;
 
+@Data
 public class Address {
-    public final String zipCode;
-    public final String street;
-
-    public Address(String zipCode, String street) {
-        this.zipCode = zipCode;
-        this.street = street;
-    }
+    private final String zipCode;
+    private final String street;
 
     // Copiers
 
@@ -21,7 +18,7 @@ public class Address {
         return new Address(zipCode, street);
     }
 
-    // Lens (only one sample, others homework)
+    // Lenses
 
     public static Lens<Address, String> STREET_LENS = new Lens<Address, String>() {
 
@@ -31,6 +28,18 @@ public class Address {
 
         public Address set(Address address, String street) {
             return address.setStreet(street);
+        }
+    };
+
+    public static Lens<Address, String> ZIP_CODE_LENS = new Lens<Address, String>() {
+        @Override
+        public String get(Address address) {
+            return address.zipCode;
+        }
+
+        @Override
+        public Address set(Address address, String zipCode) {
+            return address.setZipCode(zipCode);
         }
     };
 }

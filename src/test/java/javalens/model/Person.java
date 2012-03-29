@@ -1,17 +1,13 @@
 package javalens.model;
 
 import javalens.Lens;
+import lombok.Data;
 
+@Data
 public class Person {
-    public final String name;
-    public final int age;
-    public final Address address;
-
-    public Person(String name, int age, Address address) {
-        this.name = name;
-        this.age = age;
-        this.address = address;
-    }
+    private final String name;
+    private final int age;
+    private final Address address;
 
     // Copiers
 

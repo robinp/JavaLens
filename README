@@ -5,3 +5,14 @@ Small example on using Lens from Java.
 
 Without Lens, modifying a deep nested immutable structure is inconvenient,
 but with Lens it becomes quite easy.
+
+See
+---
+javalens.logic.UpdateTest for using basic lens
+javalens.logic.MapLensTest for using lens for maps
+javalens.logic.ComposedMapLensTest for combining various lens to access deep structures
+
+Todo
+----
+* MapLens creates a new HashMap on return. It would be nicer to use pcollections' persistent maps
+  for efficient differential updates.
