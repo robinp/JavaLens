@@ -12,6 +12,13 @@ javalens.logic.UpdateTest for using basic lens
 javalens.logic.MapLensTest for using lens for maps
 javalens.logic.ComposedMapLensTest for combining various lens to access deep structures
 
+Notes
+-----
+Now using lombok to generate DTO accessors, etc. When using maven, lombok is automatically used.
+Lombok setup for your IDE:
+* Eclipse   -> Go to http://projectlombok.org/ then download and execute the jar file
+* Idea      -> Install lombok plugin
+
 Todo
 ----
 * MapLens creates a new HashMap on return. It would be nicer to use pcollections' persistent maps
